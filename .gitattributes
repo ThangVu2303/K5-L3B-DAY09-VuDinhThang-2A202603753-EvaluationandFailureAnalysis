@@ -1,0 +1,4 @@
+# The eval set SHA is hashed from file bytes; keep LF everywhere so Windows checkouts match CI.
+*.jsonl text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
