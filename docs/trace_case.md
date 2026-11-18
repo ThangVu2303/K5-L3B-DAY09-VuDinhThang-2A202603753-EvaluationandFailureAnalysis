@@ -27,7 +27,7 @@ Output (rút gọn):
 
 | Trường | Nội dung |
 |---|---|
-| Trial | `seeded_regression C-014@11`, report `E-seeded_regression-20261118-93b1` (eval set `93b10a5744c7`) |
+| Trial | `seeded_regression C-014@11`, report `E-seeded_regression-20261118-9a4e` (eval set `9a4eea193740`) |
 | Triệu chứng | `refund_amount_correct` fail (ledger 90.000, nhãn 120.000), `proposal_correct` fail (đề xuất 120.000, policy 150.000), `reply_matches_ledger` fail (reply nói 120.000, ledger ghi 90.000). Khách được báo một con số mà tài khoản sẽ không nhận được. |
 | Bước sai đầu tiên | Event 5 `proposal {"amount_vnd": 120000}`: agent lấy quote 150.000 trừ 30.000 đã hoàn trước đó. |
 | Vì sao là bước *đầu tiên* | Event 2 đọc đúng đơn O-515 (`damage_verified`, trễ 5 ngày). Event 3 quote 150.000 đúng nhãn `proposal_amount`. Event 4 chỉ *đọc* lịch sử hoàn, chưa sai. Event 5 là chỗ đầu tiên agent đổi số tiền: nó làm thay việc của host (host đã có luật "chỉ trả phần chênh"), nên khoản 30.000 bị trừ hai lần. Event 6 (reply) chỉ là hệ quả. |

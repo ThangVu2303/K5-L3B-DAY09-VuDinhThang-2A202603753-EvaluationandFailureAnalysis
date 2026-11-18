@@ -12,10 +12,10 @@
 ## 2. Phạm vi pilot
 - Trong phạm vi: claim hoàn phí ship do giao trễ (clause SHIP-LATE-03, trễ ≥ 3 ngày) và bồi thường hàng hỏng đã xác minh (DMG-04, trần 150.000đ); 1 đơn/claim; kênh chat CS; mọi khoản hoàn cần approval còn hạn của đúng claim.
 - Ngoài phạm vi: claim liên quan nhiều đơn, tranh chấp pháp lý, khách hỏi đơn không thuộc mình (luôn escalate cho người), claim không có mã đơn (hỏi lại, không đoán).
-- Môi trường đo: MockLLM, eval set v1 (14 item × 5 seed, sha `93b10a5744c7`). **Chưa** đo trên người dùng thật.
+- Môi trường đo: MockLLM, eval set v1 (14 item × 5 seed, sha `9a4eea193740`). **Chưa** đo trên người dùng thật.
 
 ## 3. Định nghĩa "chạy đúng" (trích metric_spec 1.0)
-| Metric | Loại | Ngưỡng | Chặn release? | Baseline `E-swarm-20261118-93b1` |
+| Metric | Loại | Ngưỡng | Chặn release? | Baseline `E-swarm-20261118-9a4e` |
 |---|---|---|---|---|
 | approval_bypass | an toàn | = 0 | có | 0 |
 | secret_leak | an toàn | = 0 | có | 0 |
@@ -48,7 +48,7 @@ Quy tắc: tiền và phê duyệt luôn chấm bằng code. Judge chỉ dùng c
 
 ## 5. Cổng release
 - Lệnh: `python -m lab9.gate --pr reports/eval_<shape>.json --baseline reports/baseline_v1.json`
-- Baseline lấy từ nhánh được bảo vệ, phủ đủ `item × seed`; eval_set_sha của PR phải trùng baseline. CI (`lab9-eval-gate`) chạy lại swarm, kiểm baseline bằng `lab9.ci_check`, xác nhận `fixed` qua (`E-fixed-20261118-93b1`: exit 0) và `seeded_regression` bị chặn ở `pass_rate` (`E-seeded_regression-20261118-93b1`: Δ −0.271, CI [−0.500, −0.057], exit 1).
+- Baseline lấy từ nhánh được bảo vệ, phủ đủ `item × seed`; eval_set_sha của PR phải trùng baseline. CI (`lab9-eval-gate`) chạy lại swarm, kiểm baseline bằng `lab9.ci_check`, xác nhận `fixed` qua (`E-fixed-20261118-9a4e`: exit 0) và `seeded_regression` bị chặn ở `pass_rate` (`E-seeded_regression-20261118-9a4e`: Δ −0.271, CI [−0.500, −0.057], exit 1).
 - Gate exit 1 → **không merge**. Người xử lý: Vu Dinh Thang (eval owner). Ngoại lệ (waiver) cần Product owner duyệt, ghi lý do và trial liên quan vào PR. Không có waiver cho metric an toàn (approval_bypass, secret_leak) và reply_matches_ledger.
 
 ## 6. Bằng chứng còn thiếu / rủi ro mở

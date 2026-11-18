@@ -2,8 +2,8 @@
 
 Card này đi kèm mỗi báo cáo và được dùng lại ở Day 10. Mọi số liệu lấy từ report do `python -m lab9.eval` sinh ra (`src/reports/*.json`), không gõ tay.
 
-- **Run ID / eval set SHA:** baseline `E-swarm-20261118-93b1` · PR mẫu `E-fixed-20261118-93b1`, `E-seeded_regression-20261118-93b1` · eval set sha `93b10a5744c7`
-- **Phiên bản:** code trên nhánh `starter/d09` (sau commit `37e2ba0`) · eval set v1 (sha `93b10a5744c7`) · metric_spec 1.0 (`src/config/metric_spec.yaml`) · grader `src/lab9/graders.py` (cùng commit) · seeds 11/22/33/44/55 · MockLLM · pydantic-evals 2.68 · scipy 1.17
+- **Run ID / eval set SHA:** baseline `E-swarm-20261118-9a4e` · PR mẫu `E-fixed-20261118-9a4e`, `E-seeded_regression-20261118-9a4e` · eval set sha `9a4eea193740`
+- **Phiên bản:** code trên nhánh `starter/d09` (sau commit `37e2ba0`) · eval set v1 (sha `9a4eea193740`) · metric_spec 1.0 (`src/config/metric_spec.yaml`) · grader `src/lab9/graders.py` (cùng commit) · seeds 11/22/33/44/55 · MockLLM · pydantic-evals 2.68 · scipy 1.17
 - **Eval set:** v1, 14 item × 5 seed = 70 trial, nguồn lab8_public (T01–T14); nhãn ở `labels_v1.json`, tách khỏi item; mỗi item có `failure_modes` (xem `docs/failure_taxonomy.md`)
 - **Metric & ngưỡng:**
 

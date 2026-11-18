@@ -1,6 +1,6 @@
 # Failure taxonomy v1
 
-Nguồn bằng chứng: trace in bằng `python -m lab9.trace_case --shape <shape> --claim <C-xxx> --seed <n>` trên eval set v1 (sha `93b10a5744c7`), MockLLM. Số event là thứ tự in ra trong mục `-- trace`. Các shape `swarm`, `fixed`, `seeded_regression` là shape công khai. Bốn FM (01, 04, 06, 07) được kiểm bằng cách bật đúng một công tắc trong `lab9/variant_agent.make_shape(name, {"no_override", <công tắc>})` ở một script tạm. Script này không sửa file nào của lab.
+Nguồn bằng chứng: trace in bằng `python -m lab9.trace_case --shape <shape> --claim <C-xxx> --seed <n>` trên eval set v1 (sha `9a4eea193740`), MockLLM. Số event là thứ tự in ra trong mục `-- trace`. Các shape `swarm`, `fixed`, `seeded_regression` là shape công khai. Bốn FM (01, 04, 06, 07) được kiểm bằng cách bật đúng một công tắc trong `lab9/variant_agent.make_shape(name, {"no_override", <công tắc>})` ở một script tạm. Script này không sửa file nào của lab.
 
 | ID | Tên | Định nghĩa (1 câu) | Layer | Bằng chứng (claim@seed / trace) | Grader | Metric |
 |---|---|---|---|---|---|---|
